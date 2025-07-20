@@ -1,0 +1,27 @@
+.careers-page {
+  .job-card {
+    border-left: 4px solid $primary;
+    margin-bottom: $spacer * 1.5;
+    
+    .card-title {
+      color: $dark;
+    }
+    
+    .card-text {
+      span {
+        display: inline-block;
+        margin-right: $spacer * 2;
+      }
+    }
+  }
+  
+  .list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: $spacer * 1.5;
+    
+    &:first-child {
+      border-top: none;
+    }
+  }
+}

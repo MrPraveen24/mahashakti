@@ -1,0 +1,33 @@
+.contact-page {
+  .contact-info {
+    h3 {
+      color: $primary;
+      margin-bottom: $spacer * 1.5;
+    }
+    
+    .contact-details {
+      h5 {
+        color: $primary;
+        margin-top: $spacer * 1.5;
+        margin-bottom: $spacer * 0.5;
+      }
+    }
+  }
+  
+  form {
+    .form-control, .form-select {
+      padding: $spacer * 0.75;
+      margin-bottom: $spacer * 1.5;
+      border: 1px solid rgba($dark, 0.1);
+      
+      &:focus {
+        box-shadow: none;
+        border-color: $primary;
+      }
+    }
+    
+    textarea {
+      min-height: 150px;
+    }
+  }
+}

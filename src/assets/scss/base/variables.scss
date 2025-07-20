@@ -1,0 +1,30 @@
+// Colors
+$primary: #0056b3;
+$secondary: #6c757d;
+$dark: #343a40;
+$light: #f8f9fa;
+$white: #ffffff;
+$black: #000000;
+
+// Fonts
+$font-family-base: 'Roboto', sans-serif;
+$font-family-heading: 'Montserrat', sans-serif;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// Border
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+
+// Transition
+$transition-base: all 0.3s ease-in-out;

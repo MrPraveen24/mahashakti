@@ -1,0 +1,36 @@
+.card {
+  border: none;
+  @include box-shadow(1);
+  @include transition();
+  
+  &-header, &-footer {
+    background-color: transparent;
+    border: none;
+  }
+  
+  &-title {
+    color: $primary;
+    margin-bottom: $spacer;
+  }
+  
+  &:hover {
+    @include box-shadow(3);
+    transform: translateY(-5px);
+  }
+}
+
+.product-card {
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.service-card {
+  border-left: 4px solid $primary;
+  height: 100%;
+  
+  .card-body {
+    padding: 2rem;
+  }
+}

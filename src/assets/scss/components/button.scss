@@ -1,0 +1,30 @@
+.btn {
+  &-primary {
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+    
+    &:hover {
+      background-color: darken($primary, 10%);
+      border-color: darken($primary, 10%);
+    }
+  }
+  
+  &-outline-primary {
+    color: $primary;
+    border-color: $primary;
+    
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.cta-button {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include transition();
+}
