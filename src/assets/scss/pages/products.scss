@@ -8,10 +8,7 @@
 }
 
 /* Hero Section */
-// .products-hero-section {
-//   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-//   padding: 60px 0 40px;
-// }
+
 .products-hero-banner {
   max-height: 70px;
   overflow: hidden;
@@ -24,11 +21,6 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-.products-hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1D4ED8;
-}
 
 .products-hero-subtitle {
   font-size: 1.25rem;
@@ -39,7 +31,7 @@
 .products-hero-title {
   font-size: 42px;
   font-weight: 400;
-  color: #FF9933;
+  color: #FF9933 !important;
   margin-bottom: 16px;
   text-align: center;
 }
@@ -243,269 +235,272 @@
   color: #212121;
 }
 
-/* Product Modal */
-.products-modal .modal-dialog {
-  max-width: 1000px;
+/* Modal Container */
+.virasat-modal {
+  font-family: 'Poppins', sans-serif;
 }
 
-.products-modal-header {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 20px;
-}
-
-.products-modal-title {
-  font-size: 24px;
-  color: #212121;
-  font-weight: 400;
-}
-
-.products-modal-body {
-  padding: 24px;
-}
-
-.products-modal-footer {
-  border-top: 1px solid #e0e0e0;
-  padding: 16px 20px;
-}
-
-/* Product Gallery */
-.products-gallery {
-  margin-bottom: 24px;
-}
-
-.products-carousel {
-  border-radius: 4px;
+.virasat-modal .modal-content {
+  border: none;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.products-gallery-image {
+/* Header */
+.virasat-modal-header {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 4px 30px;
+  background: #F9F9F9;
+}
+
+.virasat-modal-title {
   width: 100%;
-  height: 350px;
-  object-fit: cover;
 }
 
-/* Product Details */
-.products-details {
-  padding-left: 24px;
-}
-
-.products-info {
-  margin-bottom: 24px;
-}
-
-.products-modal-category {
-  background-color: #FF9933;
-  color: white;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 2px;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-
-.products-modal-product-title {
-  font-size: 24px;
-  color: #212121;
-  margin-bottom: 16px;
-  font-weight: 400;
-}
-
-.products-full-description {
-  color: #555;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-
-.products-modal-price {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.products-modal-current-price {
-  font-size: 24px;
+.bhagwa-badge {
+  background: #FF9933;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  padding: 0.25rem 1rem;
+  border-radius: 50px;
   font-weight: 500;
-  color: #212121;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
-.products-modal-original-price {
-  font-size: 16px;
-  color: #878787;
-  text-decoration: line-through;
-  font-weight: 300;
-}
-
-.products-modal-discount {
-  font-size: 14px;
-  color: #FF9933;
-  font-weight: 500;
-}
-
-/* Specifications */
-.products-specifications {
-  margin-bottom: 24px;
-}
-
-.products-spec-title {
-  color: #212121;
-  margin-bottom: 16px;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.products-specs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-}
-
-.products-spec-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  background: #f8f9fa;
-  border-radius: 4px;
-  border-left: 3px solid #FF9933;
-}
-
-.products-spec-label {
-  font-weight: 400;
-  color: #212121;
-  font-size: 14px;
-}
-
-.products-spec-value {
-  color: #6c757d;
-  font-weight: 300;
-  font-size: 14px;
-}
-
-/* Features */
-.products-features {
-  margin-bottom: 24px;
-}
-
-.products-features-title {
-  color: #212121;
-  margin-bottom: 16px;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.products-features-list {
-  list-style: none;
-  padding: 0;
+.product-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #222222;
   margin: 0;
 }
 
-.products-feature-item {
-  padding: 6px 0;
-  position: relative;
-  padding-left: 20px;
-  color: #555;
-  font-size: 14px;
-  font-weight: 300;
+/* Body */
+.virasat-modal-body {
+  padding: 2rem;
+  background: #FFFFFF;
 }
 
-.products-feature-item::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
+/* Image Gallery */
+.image-gallery-container {
+  margin-bottom: 1.5rem;
+}
+
+.virasat-carousel {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-frame {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F9F9F9;
+  padding: 1rem;
+}
+
+.product-main-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Pricing Section */
+.pricing-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.price-tag {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.current-price {
+  font-size: 22px;
+  font-weight: 500;
+  color: #E68A00;
+}
+
+.original-price {
+  font-size: 1rem;
+  color: #555555;
+  text-decoration: line-through;
+}
+
+.buy-now-btn {
+  background: transparent;
+  color: #FF9933;
+  border: 2px solid #FF9933;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  background: #FF9933;
+  color: #FFFFFF;
+}
+
+/* Details Container */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #E68A00;
+  margin: 2px 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #E0E0E0;
+}
+
+.description-text {
+  color: #555555;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Specifications */
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 12px;
+  background: #ffffff;
+  border-radius: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spec-label {
+  font-weight: 500;
+  color: #222222;
+}
+
+.spec-value {
+  color: #555555;
+  font-weight: 400;
+}
+
+/* Features */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+.bhagwa-dot {
   color: #FF9933;
   font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Footer */
+.virasat-modal-footer {
+  border-top: 1px solid #E0E0E0;
+  padding: 6px 14px;
+  background: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quotation-form-container {
+  width: 100%;
+}
+
+.form-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #E68A00;
+  margin-bottom: 14px;
+}
+
+.virasat-input {
+  border: 1px solid #E0E0E0;
+  border-radius: 2px;
+  padding: 6px 10px;
   font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-/* Quotation Form */
-.products-quotation-form {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid #e0e0e0;
-}
-
-.products-form-title {
-  color: #212121;
-  margin-bottom: 16px;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.products-form-group {
-  margin-bottom: 16px;
-}
-
-.products-form-label {
-  font-weight: 400;
-  color: #212121;
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-
-.products-form-control {
-  border-radius: 4px;
-  border: 1px solid #d0d0d0;
-  padding: 8px 12px;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.products-form-control:focus {
+.virasat-input:focus {
   border-color: #FF9933;
   box-shadow: 0 0 0 2px rgba(255, 153, 51, 0.2);
 }
 
-/* Modal Buttons */
-.products-modal-btn-primary {
-  background-color: #FF9933;
-  border: 1px solid #FF9933;
+.footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+
+
+.submit-btn {
+  background: #FF9933;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #E68A00;
+}
+
+/* Custom Bhagwa Button Variant */
+.btn-bhagwa {
+  background: #FF9933;
   color: white;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 4px;
 }
 
-.products-modal-btn-primary:hover {
-  background-color: #e6851a;
-  border-color: #e6851a;
+.btn-outline-bhagwa {
+  color: #FF9933;
+  border-color: #FF9933;
 }
 
-.products-modal-btn-secondary {
-  background-color: white;
-  border: 1px solid #d0d0d0;
-  color: #212121;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 8px 16px;
-  border-radius: 4px;
+/* Spacing Utilities */
+.mt-auto {
+  margin-top: auto;
 }
 
-.products-modal-btn-secondary:hover {
-  background-color: #f5f5f5;
-  border-color: #b0b0b0;
-  color: #212121;
-}
 
-.products-modal-btn-success {
-  background-color: #28a745;
-  border: 1px solid #28a745;
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 4px;
-}
-
-.products-modal-btn-success:hover {
-  background-color: #218838;
-  border-color: #218838;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {

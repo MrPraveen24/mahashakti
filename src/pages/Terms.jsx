@@ -165,23 +165,24 @@ const Terms = () => {
   return (
     <div className="terms-page">
       {/* Hero Section */}
-      <section className="terms-hero">
-        <Container>
-          <Row>
-            <Col lg={8} className="mx-auto text-center">
-              <h1 className="hero-title">Terms & Conditions</h1>
-              <p className="hero-subtitle">
-                Please read these terms and conditions carefully before using our services
-              </p>
-              <div className="last-updated">
-                <Badge bg="primary" className="update-badge">
-                  Last Updated: {lastUpdated}
-                </Badge>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+     <section className="terms-hero">
+  <Container>
+    <Row>
+      <Col lg={8} className="mx-auto text-center">
+        <h1 className="hero-title">Terms & Conditions</h1>
+        <p className="hero-subtitle">
+          Please read these terms and conditions carefully before using our services
+        </p>
+        <div className="last-updated">
+          <Badge bg="primary" className="update-badge">
+            Last Updated: {lastUpdated}
+          </Badge>
+        </div>
+      </Col>
+    </Row>
+  </Container>
+</section>
+
 
       {/* Main Content */}
       <section className="terms-content py-5">

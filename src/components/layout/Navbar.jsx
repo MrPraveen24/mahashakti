@@ -52,12 +52,12 @@ const NavbarComponent = ({ isVisible }) => {
             <Nav.Link as={Link} to="/services" className="modern-navbar-link" onClick={handleLinkClick}>
               Services
             </Nav.Link>
-            <Nav.Link as={Link} to="/quality" className="modern-navbar-link" onClick={handleLinkClick}>
+            {/* <Nav.Link as={Link} to="/quality" className="modern-navbar-link" onClick={handleLinkClick}>
               Quality
-            </Nav.Link>
-            <Nav.Link as={Link} to="/infrastructure" className="modern-navbar-link" onClick={handleLinkClick}>
-              Infrastructure
-            </Nav.Link>
+            </Nav.Link> */}
+            {/* <Nav.Link as={Link} to="/gallery" className="modern-navbar-link" onClick={handleLinkClick}>
+              gallery
+            </Nav.Link> */}
             <Nav.Link as={Link} to="/gallery" className="modern-navbar-link" onClick={handleLinkClick}>
               Gallery
             </Nav.Link>

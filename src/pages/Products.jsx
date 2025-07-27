@@ -363,7 +363,7 @@ const Products = () => {
                   </div>
                   <Card.Body className="products-card-body">
                     <div className="products-category-badge">
-                      <Badge className="products-category">{product.category}</Badge>
+                      <Badge className="badge rounded-pill text-bg-warning">{product.category}</Badge>
                     </div>
                     <Card.Title className="products-title">{product.name}</Card.Title>
                     <Card.Text className="products-description">{product.shortDescription}</Card.Text>
@@ -397,165 +397,170 @@ const Products = () => {
       </section>
 
       {/* Product Detail Modal */}
-      <Modal show={showModal} onHide={handleCloseModal} size="xl" centered className="products-modal">
-        {selectedProduct && (
-          <>
-            <Modal.Header closeButton className="products-modal-header">
-              <Modal.Title className="products-modal-title">{selectedProduct.name}</Modal.Title>
-            </Modal.Header>
-            <Modal.Body className="products-modal-body">
-              <Row>
-                {/* Product Images */}
-                <Col lg={6}>
-                  <div className="products-gallery">
-                    <Carousel className="products-carousel">
-                      {selectedProduct.gallery.map((image, index) => (
-                        <Carousel.Item key={index}>
-                          <img
-                            className="products-gallery-image"
-                            src={image || "/placeholder.svg"}
-                            alt={`${selectedProduct.name} - View ${index + 1}`}
-                          />
-                        </Carousel.Item>
-                      ))}
-                    </Carousel>
-                  </div>
-                </Col>
-                {/* Product Details */}
-                <Col lg={6}>
-                  <div className="products-details">
-                    <div className="products-info">
-                      <Badge className="products-modal-category">{selectedProduct.category}</Badge>
-                      <h3 className="products-modal-product-title">{selectedProduct.name}</h3>
-                      <p className="products-full-description">{selectedProduct.fullDescription}</p>
-                      <div className="products-modal-price">
-                        <span className="products-modal-current-price">{selectedProduct.price}</span>
-                        <span className="products-modal-original-price">{selectedProduct.originalPrice}</span>
-                        <span className="products-modal-discount">{selectedProduct.discount}</span>
-                      </div>
+      <Modal show={showModal} onHide={handleCloseModal} size="xl" centered className="virasat-modal">
+  {selectedProduct && (
+    <div className="modal-content-wrapper">
+      <Modal.Header closeButton className="virasat-modal-header">
+        <Modal.Title className="virasat-modal-title">
+          <span className="bhagwa-badge">{selectedProduct.category}</span>
+          <h3 className="product-name">{selectedProduct.name}</h3>
+        </Modal.Title>
+      </Modal.Header>
+      
+      <Modal.Body className="virasat-modal-body">
+        <Row className="g-5">
+          {/* Left Column - Visuals */}
+          <Col lg={6} className="d-flex flex-column">
+            <div className="image-gallery-container">
+              <Carousel className="virasat-carousel" interval={null}>
+                {selectedProduct.gallery.map((image, index) => (
+                  <Carousel.Item key={index}>
+                    <div className="image-frame">
+                      <img
+                        src={image || "/placeholder.svg"}
+                        alt={`${selectedProduct.name}`}
+                        className="product-main-image"
+                      />
                     </div>
-
-                    {/* Specifications */}
-                    <div className="products-specifications">
-                      <h5 className="products-spec-title">Specifications</h5>
-                      <div className="products-specs-grid">
-                        {Object.entries(selectedProduct.specifications).map(([key, value]) => (
-                          <div className="products-spec-item" key={key}>
-                            <span className="products-spec-label">{key}:</span>
-                            <span className="products-spec-value">{value}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="products-features">
-                      <h5 className="products-features-title">Key Features</h5>
-                      <ul className="products-features-list">
-                        {selectedProduct.features.map((feature, index) => (
-                          <li key={index} className="products-feature-item">
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Quotation Form */}
-                    <div className="products-quotation-form">
-                      <h5 className="products-form-title">Request Quotation</h5>
-                      <Form>
-                        <Row>
-                          <Col md={6}>
-                            <Form.Group className="products-form-group">
-                              <Form.Label className="products-form-label">Quantity</Form.Label>
-                              <Form.Control
-                                type="number"
-                                name="quantity"
-                                value={quotationData.quantity}
-                                onChange={handleQuotationChange}
-                                min="1"
-                                className="products-form-control"
-                              />
-                            </Form.Group>
-                          </Col>
-                          <Col md={6}>
-                            <Form.Group className="products-form-group">
-                              <Form.Label className="products-form-label">Customer Name</Form.Label>
-                              <Form.Control
-                                type="text"
-                                name="customerName"
-                                value={quotationData.customerName}
-                                onChange={handleQuotationChange}
-                                placeholder="Enter your name"
-                                className="products-form-control"
-                              />
-                            </Form.Group>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Col md={6}>
-                            <Form.Group className="products-form-group">
-                              <Form.Label className="products-form-label">Email</Form.Label>
-                              <Form.Control
-                                type="email"
-                                name="email"
-                                value={quotationData.email}
-                                onChange={handleQuotationChange}
-                                placeholder="Enter your email"
-                                className="products-form-control"
-                              />
-                            </Form.Group>
-                          </Col>
-                          <Col md={6}>
-                            <Form.Group className="products-form-group">
-                              <Form.Label className="products-form-label">Phone</Form.Label>
-                              <Form.Control
-                                type="tel"
-                                name="phone"
-                                value={quotationData.phone}
-                                onChange={handleQuotationChange}
-                                placeholder="Enter your phone"
-                                className="products-form-control"
-                              />
-                            </Form.Group>
-                          </Col>
-                        </Row>
-                        <Form.Group className="products-form-group">
-                          <Form.Label className="products-form-label">Special Requirements</Form.Label>
-                          <Form.Control
-                            as="textarea"
-                            rows={3}
-                            name="requirements"
-                            value={quotationData.requirements}
-                            onChange={handleQuotationChange}
-                            placeholder="Any special requirements or customizations..."
-                            className="products-form-control"
-                          />
-                        </Form.Group>
-                      </Form>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </Modal.Body>
-            <Modal.Footer className="products-modal-footer">
-              <Button className="products-modal-btn-secondary" onClick={handleCloseModal}>
-                Close
-              </Button>
-              <Button
-                className="products-modal-btn-success"
-                onClick={handleRequestQuotation}
-                disabled={!quotationData.customerName || !quotationData.email}
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </div>
+            
+            <div className="pricing-section mt-auto">
+              <div className="price-tag">
+                <span className="current-price">{selectedProduct.price}</span>
+                {selectedProduct.originalPrice && (
+                  <span className="original-price">{selectedProduct.originalPrice}</span>
+                )}
+              </div>
+              <Button 
+                variant="outline-bhagwa" 
+                className="buy-now-btn"
+                onClick={() => handleBuyNow(selectedProduct)}
               >
-                Request Quotation
-              </Button>
-              <Button className="products-modal-btn-primary" onClick={() => handleBuyNow(selectedProduct)}>
                 Buy Now
               </Button>
-            </Modal.Footer>
-          </>
-        )}
-      </Modal>
+            </div>
+          </Col>
+
+          {/* Right Column - Details */}
+          <Col lg={6}>
+            <div className="details-container">
+              {/* Description */}
+              <div className="description-section">
+                <h5 className="section-heading">Product Story</h5>
+                <p className="description-text">{selectedProduct.fullDescription}</p>
+              </div>
+              
+              {/* Specifications */}
+              <div className="specs-section">
+                <h5 className="section-heading">Technical Details</h5>
+                <div className="specs-grid">
+                  {Object.entries(selectedProduct.specifications).map(([key, value]) => (
+                    <div className="spec-item" key={key}>
+                      <span className="spec-label">{key}</span>
+                      <span className="spec-value">{value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Features */}
+              <div className="features-section">
+                <h5 className="section-heading mt-3">Key Highlights</h5>
+                <ul className="features-list">
+                  {selectedProduct.features.map((feature, index) => (
+                    <li key={index} className="feature-item">
+                      <span className="bhagwa-dot">•</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Modal.Body>
+      
+      <Modal.Footer className="virasat-modal-footer">
+        <div className="quotation-form-container">
+          <h5 className="form-heading">Request Custom Quote</h5>
+          <Form>
+            <Row className="g-3">
+              <Col md={6}>
+                <Form.Group>
+                  <Form.Label>Your Name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="customerName"
+                    placeholder="Full Name"
+                    className="virasat-input"
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={6}>
+                <Form.Group>
+                  <Form.Label>Phone Number</Form.Label>
+                  <Form.Control
+                    type="tel"
+                    name="phone"
+                    placeholder="+91 "
+                    className="virasat-input"
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={6}>
+                <Form.Group>
+                  <Form.Label>Email Address</Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    placeholder="email@example.com"
+                    className="virasat-input"
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={6}>
+                <Form.Group>
+                  <Form.Label>Quantity Needed</Form.Label>
+                  <Form.Control
+                    type="number"
+                    name="quantity"
+                    min="1"
+                    placeholder="1"
+                    className="virasat-input"
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={6}>
+                <Form.Group>
+                  <Form.Label>Special Requirements</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    rows={1}
+                    name="requirements"
+                    placeholder="Customizations or special requests..."
+                    className="virasat-input"
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form>
+        </div>
+        
+        <div className="footer-actions">
+          <Button variant="light" className="products-btn-secondary btn btn-primary" onClick={handleCloseModal}>
+            Close
+          </Button>
+          <Button variant="bhagwa" className="products-btn-primary btn btn-primary">
+            Submit
+          </Button>
+        </div>
+      </Modal.Footer>
+    </div>
+  )}
+</Modal>
     </div>
   )
 }

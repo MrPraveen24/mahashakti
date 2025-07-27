@@ -1,7 +1,9 @@
 import { Container, Row, Col, Button } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../assets/scss/pages/home.scss"
+import TestimonialSlider from '../components/shared/TestimonialSlider';
 
+const partners = Array.from({ length: 10 }, (_, i) => `/assets/images/p${i + 1}.png`);
 const Home = () => {
   return (
     <div className="home-page">
@@ -26,10 +28,10 @@ const Home = () => {
                 machines with precision and excellence.
               </p>
               <div className="home-hero-buttons">
-                <Button variant="primary" size="lg" className="home-btn-primary me-3">
+                <Button variant="primary" size="sm" className="home-btn-primary me-3">
                   Our Services
                 </Button>
-                <Button variant="outline-light" size="lg" className="home-btn-outline">
+                <Button variant="outline-light" size="sm" className="home-btn-outline">
                   Learn More
                 </Button>
               </div>
@@ -152,7 +154,7 @@ const Home = () => {
               </div>
             </Col>
             <Col lg={6}>
-              <div className="home-network-image">
+              <div className="home-network-image text-end">
                 <img src="/assets/images/1.jpg" alt="Global Network" className="img-fluid rounded" />
               </div>
             </Col>
@@ -160,22 +162,7 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* Company Logos Section */}
-      <section className="home-partners-section">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="home-partners-logos d-flex justify-content-between align-items-center">
-                <img src="/assets/images/jpminda.png" alt="Partner 1" className="home-partner-logo" />
-                <img src="/assets/images/jpminda.png" alt="Partner 2" className="home-partner-logo" />
-                <img src="/assets/images/jpminda.png" alt="Partner 3" className="home-partner-logo" />
-                <img src="/assets/images/jpminda.png" alt="Partner 4" className="home-partner-logo" />
-                <img src="/assets/images/jpminda.png" alt="Partner 5" className="home-partner-logo" />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+
 
       {/* Discovery Solutions Grid */}
       <section className="home-solutions-section">
@@ -264,81 +251,58 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="home-testimonials-section">
+      <TestimonialSlider />
+
+            {/* Company Partner Section */}
+      <section className="home-partners-section">
         <Container>
-          <Row className="text-center">
-            <Col>
-              <h2 className="home-section-title">What Our Clients Say</h2>
-              <p className="home-section-description">
-                Hear from our satisfied clients about their experience with Mahashakti Engineering
-              </p>
+          <Row className="justify-content-center">
+            <Col lg={12} className="text-center">
+              <h2 className="partners-heading">Our Valuable Partners</h2>
             </Col>
-          </Row>
-          <Row>
-            <Col lg={10} className="mx-auto">
-              <div className="home-testimonials-grid">
-                <div className="home-testimonial-card">
-                  <div className="home-testimonial-content">
-                    <div className="home-testimonial-quote">
-                      "Mahashakti Engineering delivered exceptional building machines that exceeded our expectations.
-                      Their attention to detail and quality is unmatched."
-                    </div>
-                    <div className="home-testimonial-author">
-                      <img
-                        src="/placeholder.svg?height=50&width=50"
-                        alt="Rajesh Kumar"
-                        className="home-testimonial-avatar"
-                      />
-                      <div className="home-testimonial-info">
-                        <h6 className="home-testimonial-name">Rajesh Kumar</h6>
-                        <p className="home-testimonial-position">Construction Manager, ABC Builders</p>
-                      </div>
-                    </div>
+            <Col lg={12}>
+              <div className="home-partners-logos">
+                {partners.map((logo, index) => (
+                  <div className="partner-card" key={index}>
+                    <img
+                      src={logo}
+                      alt={`Partner ${index + 1}`}
+                      className="home-partner-logo"
+                    />
                   </div>
-                </div>
-                <div className="home-testimonial-card">
-                  <div className="home-testimonial-content">
-                    <div className="home-testimonial-quote">
-                      "The engineering expertise and manufacturing quality provided by Mahashakti Engineering has been
-                      instrumental in our project success."
-                    </div>
-                    <div className="home-testimonial-author">
-                      <img
-                        src="/placeholder.svg?height=50&width=50"
-                        alt="Priya Sharma"
-                        className="home-testimonial-avatar"
-                      />
-                      <div className="home-testimonial-info">
-                        <h6 className="home-testimonial-name">Priya Sharma</h6>
-                        <p className="home-testimonial-position">Project Director, XYZ Infrastructure</p>
-                      </div>
-                    </div>
+                ))}
+                {/* Duplicate for smooth infinite loop */}
+                {partners.map((logo, index) => (
+                  <div className="partner-card" key={`dup-${index}`}>
+                    <img
+                      src={logo}
+                      alt={`Partner duplicate ${index + 1}`}
+                      className="home-partner-logo"
+                    />
                   </div>
-                </div>
-                <div className="home-testimonial-card">
-                  <div className="home-testimonial-content">
-                    <div className="home-testimonial-quote">
-                      "Outstanding service and innovative solutions. Mahashakti Engineering is our trusted partner for
-                      all manufacturing needs."
-                    </div>
-                    <div className="home-testimonial-author">
-                      <img
-                        src="/placeholder.svg?height=50&width=50"
-                        alt="Amit Patel"
-                        className="home-testimonial-avatar"
-                      />
-                      <div className="home-testimonial-info">
-                        <h6 className="home-testimonial-name">Amit Patel</h6>
-                        <p className="home-testimonial-position">CEO, Industrial Solutions Ltd</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </Col>
           </Row>
         </Container>
       </section>
+
+      {/* cta section------- */}
+      <section className="cta-section">
+  <Container>
+    <Row className="justify-content-center text-center">
+      <Col lg={8}>
+        <h2 className="cta-heading">Ready to Start Your Next Project?</h2>
+        <p className="cta-subheading">
+          Mahashakti Engineering specializes in precision manufacturing for building machines.
+          Partner with us to achieve unmatched efficiency and reliability.
+        </p>
+        <Button className="cta-button">Contact Us</Button>
+      </Col>
+    </Row>
+  </Container>
+</section>
+
     </div>
   )
 }

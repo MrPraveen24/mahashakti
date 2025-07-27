@@ -35,10 +35,10 @@ const Footer = () => {
           <div className="footer__section">
             <h4 className="footer__section-title">Our Products</h4>
             <ul className="footer__nav-list">
-              <li className="footer__nav-item"><a href="/products/valves" className="footer__nav-link">Industrial Valves</a></li>
-              <li className="footer__nav-item"><a href="/products/pumps" className="footer__nav-link">Pumps & Parts</a></li>
-              <li className="footer__nav-item"><a href="/products/fittings" className="footer__nav-link">Pipe Fittings</a></li>
-              <li className="footer__nav-item"><a href="/products/custom" className="footer__nav-link">Custom Solutions</a></li>
+              <li className="footer__nav-item"><a href="#" className="footer__nav-link">Industrial Valves</a></li>
+              <li className="footer__nav-item"><a href="#" className="footer__nav-link">Pumps & Parts</a></li>
+              <li className="footer__nav-item"><a href="#" className="footer__nav-link">Pipe Fittings</a></li>
+              <li className="footer__nav-item"><a href="#" className="footer__nav-link">Custom Solutions</a></li>
             </ul>
           </div>
 

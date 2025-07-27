@@ -9,7 +9,7 @@ const About = () => {
       <section className="about-hero-banner">
         <div className="about-banner-image">
           <img
-            src="/placeholder.svg?height=600&width=1200"
+            src="/assets/images/b2.png"
             alt="Mahashakti Engineering Facility"
             className="about-banner-img"
           />
@@ -58,68 +58,93 @@ const About = () => {
 
       {/* Company Story Section */}
       <section className="about-story-section">
-        <Container>
-          <Row>
-            <Col lg={12} className="text-center">
-              <h2 className="about-section-title">Our Story</h2>
-              <p className="about-section-subtitle">A legacy of innovation, precision, and excellence in engineering</p>
-            </Col>
-          </Row>
-          <Row className="align-items-center">
-            <Col lg={6}>
-              <div className="about-story-content">
-                <h3 className="about-story-title">From Humble Beginnings to Industry Leadership</h3>
-                <p className="about-story-text">
-                  Founded in 1945 by visionary engineer Rajesh Mahashakti, our company began as a small workshop with a
-                  big dream: to revolutionize the construction industry through innovative building machines. What
-                  started with just three employees and a passion for precision engineering has grown into one of
-                  India's most trusted names in manufacturing.
-                </p>
-                <p className="about-story-text">
-                  Over the decades, we have consistently pushed the boundaries of what's possible in engineering. Our
-                  commitment to quality, innovation, and customer satisfaction has earned us recognition across the
-                  globe, with our machines operating in over 25 countries worldwide.
-                </p>
-                <div className="about-timeline">
-                  <div className="about-timeline-item">
-                    <div className="about-timeline-year">1945</div>
-                    <div className="about-timeline-content">
-                      <h5>Company Founded</h5>
-                      <p>Started as a small engineering workshop</p>
-                    </div>
-                  </div>
-                  <div className="about-timeline-item">
-                    <div className="about-timeline-year">1975</div>
-                    <div className="about-timeline-content">
-                      <h5>First Major Contract</h5>
-                      <p>Secured contract for 100 building machines</p>
-                    </div>
-                  </div>
-                  <div className="about-timeline-item">
-                    <div className="about-timeline-year">2000</div>
-                    <div className="about-timeline-content">
-                      <h5>International Expansion</h5>
-                      <p>Expanded operations to Southeast Asia</p>
-                    </div>
-                  </div>
-                  <div className="about-timeline-item">
-                    <div className="about-timeline-year">2020</div>
-                    <div className="about-timeline-content">
-                      <h5>Digital Transformation</h5>
-                      <p>Implemented Industry 4.0 technologies</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col lg={6}>
-              <div className="about-story-image">
-                <Image src="/placeholder.svg?height=500&width=600" alt="Company History" fluid rounded />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+  <Container>
+    <Row>
+      <Col lg={12} className="text-center mb-5">
+        <h2 className="about-section-title display-4 fw-light">Our Story</h2>
+        <p className="about-section-subtitle lead text-muted">A legacy of innovation, precision, and excellence in engineering</p>
+        <div className="about-divider"></div>
+      </Col>
+    </Row>
+    <Row className="align-items-center mb-5">
+      <Col lg={6} className="mb-4 mb-lg-0">
+        <div className="about-story-content">
+          <h3 className="about-story-title fw-normal mb-4">From Humble Beginnings to Industry Leadership</h3>
+          <p className="about-story-text mb-4">
+            Founded in 1945 by visionary engineer Rajesh Mahashakti, our company began as a small workshop with a
+            big dream: to revolutionize the construction industry through innovative building machines. What
+            started with just three employees and a passion for precision engineering has grown into one of
+            India's most trusted names in manufacturing.
+          </p>
+          <p className="about-story-text">
+            Over the decades, we have consistently pushed the boundaries of what's possible in engineering. Our
+            commitment to quality, innovation, and customer satisfaction has earned us recognition across the
+            globe, with our machines operating in over 25 countries worldwide.
+          </p>
+        </div>
+      </Col>
+      <Col lg={6}>
+        <div className="about-story-image">
+          <Image 
+            src="/assets/images/ab1.webp" 
+            alt="Company History" 
+            className="about-story-img" 
+          />
+          <div className="about-image-badge">
+            <span>Since 1945</span>
+          </div>
+        </div>
+      </Col>
+    </Row>
+    <Row>
+      <Col lg={12}>
+        <div className="about-timeline">
+          <div className="timeline-line"></div>
+          
+          <div className="about-timeline-item">
+            <div className="about-timeline-year">
+              <span>1945</span>
+            </div>
+            <div className="about-timeline-content">
+              <h5>Company Founded</h5>
+              <p>Started as a small engineering workshop in Mumbai</p>
+            </div>
+          </div>
+          
+          <div className="about-timeline-item">
+            <div className="about-timeline-year">
+              <span>1975</span>
+            </div>
+            <div className="about-timeline-content">
+              <h5>First Major Contract</h5>
+              <p>Secured landmark contract for 100 building machines</p>
+            </div>
+          </div>
+          
+          <div className="about-timeline-item">
+            <div className="about-timeline-year">
+              <span>2000</span>
+            </div>
+            <div className="about-timeline-content">
+              <h5>International Expansion</h5>
+              <p>Expanded operations to Southeast Asia and Middle East</p>
+            </div>
+          </div>
+          
+          <div className="about-timeline-item">
+            <div className="about-timeline-year">
+              <span>2020</span>
+            </div>
+            <div className="about-timeline-content">
+              <h5>Digital Transformation</h5>
+              <p>Implemented Industry 4.0 technologies across all facilities</p>
+            </div>
+          </div>
+        </div>
+      </Col>
+    </Row>
+  </Container>
+</section>
 
       {/* Mission & Vision Section */}
       <section className="about-mission-section">
@@ -230,75 +255,105 @@ const About = () => {
             </Col>
           </Row>
           <Row>
-            <Col lg={4} md={6} className="mb-4">
-              <Card className="about-team-card">
-                <div className="about-team-image-wrapper">
-                  <Image src="/placeholder.svg?height=300&width=300" alt="CEO" className="about-team-image" />
-                </div>
-                <Card.Body className="text-center">
-                  <Card.Title className="about-team-name">Arjun Mahashakti</Card.Title>
-                  <Card.Subtitle className="about-team-position">Chief Executive Officer</Card.Subtitle>
-                  <Card.Text className="about-team-bio">
-                    Third-generation leader with 20+ years of experience in engineering and business strategy. MBA from
-                    IIM Ahmedabad.
-                  </Card.Text>
-                  <div className="about-team-social">
-                    <a href="#" className="about-social-link">
-                      <i className="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" className="about-social-link">
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col lg={4} md={6} className="mb-4">
-              <Card className="about-team-card">
-                <div className="about-team-image-wrapper">
-                  <Image src="/placeholder.svg?height=300&width=300" alt="CTO" className="about-team-image" />
-                </div>
-                <Card.Body className="text-center">
-                  <Card.Title className="about-team-name">Dr. Priya Sharma</Card.Title>
-                  <Card.Subtitle className="about-team-position">Chief Technology Officer</Card.Subtitle>
-                  <Card.Text className="about-team-bio">
-                    Leading innovation with 15+ years in R&D. PhD in Mechanical Engineering from IIT Delhi, 25+ patents
-                    in manufacturing technology.
-                  </Card.Text>
-                  <div className="about-team-social">
-                    <a href="#" className="about-social-link">
-                      <i className="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" className="about-social-link">
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col lg={4} md={6} className="mb-4">
-              <Card className="about-team-card">
-                <div className="about-team-image-wrapper">
-                  <Image src="/placeholder.svg?height=300&width=300" alt="COO" className="about-team-image" />
-                </div>
-                <Card.Body className="text-center">
-                  <Card.Title className="about-team-name">Vikram Singh</Card.Title>
-                  <Card.Subtitle className="about-team-position">Chief Operating Officer</Card.Subtitle>
-                  <Card.Text className="about-team-bio">
-                    Operations excellence expert with 18+ years in manufacturing. Lean Six Sigma Black Belt,
-                    specializing in process optimization.
-                  </Card.Text>
-                  <div className="about-team-social">
-                    <a href="#" className="about-social-link">
-                      <i className="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" className="about-social-link">
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
+            <Col lg={4} md={6} className="mb-5">
+  <div className="team-profile-card">
+    <div className="team-profile-image-container">
+      <Image 
+        src="/assets/images/ow1.jpg" 
+        alt="CEO" 
+        className="team-profile-img"
+      />
+      <div className="team-profile-overlay">
+        <div className="team-profile-social">
+          
+        </div>
+      </div>
+    </div>
+    
+    <div className="team-profile-content">
+      <div className="team-profile-header">
+        <h3 className="team-profile-name">Arjun Mahashakti</h3>
+        <p className="team-profile-title">Chief Executive Officer</p>
+        <div className="team-profile-divider"></div>
+      </div>
+      
+      <p className="team-profile-bio">
+        Third-generation leader with 20+ years of experience in engineering and business strategy. 
+        MBA from IIM Ahmedabad.
+      </p>
+      
+      <div className="team-profile-footer">
+        <span className="team-experience-badge">20+ Years Experience</span>
+      </div>
+    </div>
+  </div>
+</Col>
+            <Col lg={4} md={6} className="mb-5">
+  <div className="team-profile-card">
+    <div className="team-profile-image-container">
+      <Image 
+        src="/assets/images/ow1.jpg" 
+        alt="CEO" 
+        className="team-profile-img"
+      />
+      <div className="team-profile-overlay">
+        <div className="team-profile-social">
+          
+        </div>
+      </div>
+    </div>
+    
+    <div className="team-profile-content">
+      <div className="team-profile-header">
+        <h3 className="team-profile-name">Arjun Mahashakti</h3>
+        <p className="team-profile-title">Chief Executive Officer</p>
+        <div className="team-profile-divider"></div>
+      </div>
+      
+      <p className="team-profile-bio">
+        Third-generation leader with 20+ years of experience in engineering and business strategy. 
+        MBA from IIM Ahmedabad.
+      </p>
+      
+      <div className="team-profile-footer">
+        <span className="team-experience-badge">20+ Years Experience</span>
+      </div>
+    </div>
+  </div>
+</Col>
+            <Col lg={4} md={6} className="mb-5">
+  <div className="team-profile-card">
+    <div className="team-profile-image-container">
+      <Image 
+        src="/assets/images/ow1.jpg" 
+        alt="CEO" 
+        className="team-profile-img"
+      />
+      <div className="team-profile-overlay">
+        <div className="team-profile-social">
+          
+        </div>
+      </div>
+    </div>
+    
+    <div className="team-profile-content">
+      <div className="team-profile-header">
+        <h3 className="team-profile-name">Arjun Mahashakti</h3>
+        <p className="team-profile-title">Chief Executive Officer</p>
+        <div className="team-profile-divider"></div>
+      </div>
+      
+      <p className="team-profile-bio">
+        Third-generation leader with 20+ years of experience in engineering and business strategy. 
+        MBA from IIM Ahmedabad.
+      </p>
+      
+      <div className="team-profile-footer">
+        <span className="team-experience-badge">20+ Years Experience</span>
+      </div>
+    </div>
+  </div>
+</Col>
           </Row>
         </Container>
       </section>
